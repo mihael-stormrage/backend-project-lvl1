@@ -1,10 +1,13 @@
 import getRandInt from './math.js';
 import { ask } from './cli.js';
 
-let played = 1;
+let played = 0;
 
 const play = (game) => {
-  while (game() && played < 3) played += 1;
+  while (played < 3) {
+    if (!game()) break;
+    played += 1;
+  }
   return played === 3;
 };
 
