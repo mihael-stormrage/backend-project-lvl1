@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import greet from '../src/cli.js';
-import even from '../src/games.js';
+import makeGame from '../src/index.js';
+import even from '../src/games/even.js';
 
-const name = greet();
-if (even()) console.log(`Congratulations, ${name}!`);
+makeGame(even);
