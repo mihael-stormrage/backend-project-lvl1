@@ -1,15 +1,6 @@
-import getRandInt from './math.js';
-import { ask } from './cli.js';
-
-let played = 0;
-
-const play = (game) => {
-  while (played < 3) {
-    if (!game()) break;
-    played += 1;
-  }
-  return played === 3;
-};
+import getRandInt from '../math.js';
+import { ask } from '../cli.js';
+import play from '../engine.js';
 
 const even = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -21,4 +12,4 @@ const even = () => {
   });
 };
 
-export { even as default };
+export default even;
