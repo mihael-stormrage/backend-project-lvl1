@@ -3,4 +3,4 @@
 [![Node CI](https://github.com/mihael-stormrage/backend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/mihael-stormrage/backend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f591cc7b86e4b4a345eb/maintainability)](https://codeclimate.com/github/mihael-stormrage/backend-project-lvl1/maintainability)
 
-[![asciicast](https://asciinema.org/a/RZGuBai2rz6fTVnzNrjmo1A5B.svg)](https://asciinema.org/a/RZGuBai2rz6fTVnzNrjmo1A5B)
+[![asciicast](https://asciinema.org/a/WQ9jRNwmFNBWVIG32pZOkGdLg.svg)](https://asciinema.org/a/WQ9jRNwmFNBWVIG32pZOkGdLg)
