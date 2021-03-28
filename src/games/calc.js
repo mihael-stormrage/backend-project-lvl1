@@ -1,11 +1,9 @@
 import getRandInt from '../math.js';
-import { ask } from '../cli.js';
-import play from '../engine.js';
+import makeGame from '../index.js';
 
-const calc = () => {
-  console.log('What is the result of the expression?');
-
-  return play(() => {
+const calc = () => makeGame(
+  'What is the result of the expression?',
+  () => {
     const a = getRandInt();
     const b = getRandInt();
     let q;
@@ -26,9 +24,8 @@ const calc = () => {
       default:
         break;
     }
-    console.log(`Question: ${q}`);
-    return ask(ans.toString());
-  });
-};
+    return { question: q, answer: ans };
+  },
+);
 
 export default calc;

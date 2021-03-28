@@ -1,6 +1,5 @@
 import getRandInt, { sequence } from '../math.js';
-import { ask } from '../cli.js';
-import play from '../engine.js';
+import makeGame from '../index.js';
 
 const printSeq = (start, step, n) => {
   const seq = [];
@@ -10,16 +9,14 @@ const printSeq = (start, step, n) => {
   return seq.join(' ');
 };
 
-const progression = () => {
-  console.log('What number is missing in the progression?');
-
-  return play(() => {
+const progression = () => makeGame(
+  'What number is missing in the progression?',
+  () => {
     const start = getRandInt(1, 19);
     const step = getRandInt(1, 9);
     const n = getRandInt(1, 10);
-    console.log(`Question: ${printSeq(start, step, n)}`);
-    return ask(sequence(start, step, n).toString());
-  });
-};
+    return { question: printSeq(start, step, n), answer: sequence(start, step, n) };
+  },
+);
 
 export default progression;
