@@ -9,7 +9,7 @@ const greet = () => {
 
 const ask = (expected) => {
   const answer = readlineSync.question('Your answer: ');
-  const isRight = answer === expected;
+  const isRight = answer === expected.toString();
   console.log(isRight ? 'Correct!' : `'${answer}' is wrong answer ;(. Correct answer was '${expected}'.`);
   return isRight;
 };
