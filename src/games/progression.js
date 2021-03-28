@@ -1,4 +1,4 @@
-import getRandInt, { sequence } from '../math.js';
+import getRandInt, { sequence } from '../utils.js';
 import makeGame from '../index.js';
 
 const printSeq = (start, step, n) => {

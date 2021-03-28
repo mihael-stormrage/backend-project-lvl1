@@ -1,4 +1,4 @@
-import getRandInt, { isPrime } from '../math.js';
+import getRandInt, { isPrime } from '../utils.js';
 import makeGame from '../index.js';
 
 const prime = () => makeGame(

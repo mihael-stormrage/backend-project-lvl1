@@ -1,4 +1,4 @@
-import getRandInt, { gcd as getGcd } from '../math.js';
+import getRandInt, { gcd as getGcd } from '../utils.js';
 import makeGame from '../index.js';
 
 const gcd = () => makeGame(
