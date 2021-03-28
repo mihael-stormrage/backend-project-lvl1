@@ -9,22 +9,25 @@ const calc = () => {
     const a = getRandInt();
     const b = getRandInt();
     let q;
+    let ans;
     switch (getRandInt(1, 3)) {
       case 1:
         q = `${a} + ${b}`;
+        ans = a + b;
         break;
       case 2:
         q = `${a} - ${b}`;
+        ans = a - b;
         break;
       case 3:
         q = `${a} * ${b}`;
+        ans = a * b;
         break;
       default:
         break;
     }
     console.log(`Question: ${q}`);
-    // eslint-disable-next-line no-eval
-    return ask(eval(q).toString());
+    return ask(ans.toString());
   });
 };
 
