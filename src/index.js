@@ -1,5 +1,14 @@
 import greet, { ask } from './cli.js';
-import play from './engine.js';
+
+const play = (game) => {
+  const rounds = 3;
+  let played = 0;
+  while (played < rounds) {
+    if (!game()) break;
+    played += 1;
+  }
+  return played === rounds;
+};
 
 const makeGame = (description, question, checker) => {
   const name = greet();
