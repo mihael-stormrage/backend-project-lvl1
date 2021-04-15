@@ -6,25 +6,16 @@ const calc = () => makeGame(
   () => {
     const a = getRandInt();
     const b = getRandInt();
-    let q;
-    let ans;
     switch (getRandInt(1, 3)) {
       case 1:
-        q = `${a} + ${b}`;
-        ans = a + b;
-        break;
+        return { question: `${a} + ${b}`, answer: a + b };
       case 2:
-        q = `${a} - ${b}`;
-        ans = a - b;
-        break;
+        return { question: `${a} - ${b}`, answer: a - b };
       case 3:
-        q = `${a} * ${b}`;
-        ans = a * b;
-        break;
+        return { question: `${a} * ${b}`, answer: a * b };
       default:
-        break;
+        throw new Error('Wrong operator');
     }
-    return { question: q, answer: ans };
   },
 );
 
