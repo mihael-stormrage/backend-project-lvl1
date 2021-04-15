@@ -10,15 +10,14 @@ const play = (game) => {
   return played === rounds;
 };
 
-const makeGame = (description, question, checker) => {
+const makeGame = (description, question) => {
   const name = greet();
   if (!question) return;
   console.log(description);
 
   const game = () => play(() => {
-    const q = question();
-    const ans = q?.answer ?? checker(q);
-    console.log(`Question: ${q?.question ?? q}`);
+    const { question: q, answer: ans } = question();
+    console.log(`Question: ${q}`);
     return ask(ans);
   });
   const congrats = `Congratulations, ${name}!`;
