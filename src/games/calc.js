@@ -1,7 +1,7 @@
 import getRandInt from '../utils.js';
 import makeGame from '../index.js';
 
-const calc = () => makeGame(
+const calcGame = () => makeGame(
   'What is the result of the expression?',
   () => {
     const a = getRandInt();
@@ -19,4 +19,4 @@ const calc = () => makeGame(
   },
 );
 
-export default calc;
+export default calcGame;

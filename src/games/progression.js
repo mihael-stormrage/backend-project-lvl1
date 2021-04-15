@@ -9,7 +9,7 @@ const printSeq = (start, step, n) => {
   return seq.join(' ');
 };
 
-const progression = () => makeGame(
+const progressionGame = () => makeGame(
   'What number is missing in the progression?',
   () => {
     const start = getRandInt(1, 19);
@@ -19,4 +19,4 @@ const progression = () => makeGame(
   },
 );
 
-export default progression;
+export default progressionGame;

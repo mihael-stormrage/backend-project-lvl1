@@ -1,7 +1,7 @@
 import getRandInt, { isPrime } from '../utils.js';
 import makeGame from '../index.js';
 
-const prime = () => makeGame(
+const primeGame = () => makeGame(
   'Answer "yes" if given number is prime. Otherwise answer "no".',
   () => {
     const q = getRandInt();
@@ -9,4 +9,4 @@ const prime = () => makeGame(
   },
 );
 
-export default prime;
+export default primeGame;

@@ -1,7 +1,7 @@
 import getRandInt from '../utils.js';
 import makeGame from '../index.js';
 
-const even = () => makeGame(
+const evenGame = () => makeGame(
   'Answer "yes" if the number is even, otherwise answer "no".',
   () => {
     const q = getRandInt();
@@ -9,4 +9,4 @@ const even = () => makeGame(
   },
 );
 
-export default even;
+export default evenGame;
