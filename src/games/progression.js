@@ -1,6 +1,8 @@
 import getRandInt, { sequence } from '../utils.js';
 import makeGame from '../index.js';
 
+const description = 'What number is missing in the progression?';
+
 const printSeq = (start, step, n) => {
   const seq = [];
   for (let i = 1; i <= 10; i += 1) {
@@ -10,7 +12,7 @@ const printSeq = (start, step, n) => {
 };
 
 const progressionGame = () => makeGame(
-  'What number is missing in the progression?',
+  description,
   () => {
     const start = getRandInt(1, 19);
     const step = getRandInt(1, 9);

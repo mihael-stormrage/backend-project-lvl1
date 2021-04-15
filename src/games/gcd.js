@@ -1,8 +1,10 @@
 import getRandInt, { gcd as getGcd } from '../utils.js';
 import makeGame from '../index.js';
 
+const description = 'Find the greatest common divisor of given numbers.';
+
 const gcdGame = () => makeGame(
-  'Find the greatest common divisor of given numbers.',
+  description,
   () => {
     const a = getRandInt();
     const b = getRandInt();

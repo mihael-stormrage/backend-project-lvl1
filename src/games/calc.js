@@ -1,8 +1,10 @@
 import getRandInt from '../utils.js';
 import makeGame from '../index.js';
 
+const description = 'What is the result of the expression?';
+
 const calcGame = () => makeGame(
-  'What is the result of the expression?',
+  description,
   () => {
     const a = getRandInt();
     const b = getRandInt();
