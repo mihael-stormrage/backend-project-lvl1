@@ -21,7 +21,9 @@ const makeGame = (description, question, checker) => {
     console.log(`Question: ${q?.question ?? q}`);
     return ask(ans);
   });
-  console.log(game() ? `Congratulations, ${name}!` : `Let's try again, ${name}!`);
+  const congrats = `Congratulations, ${name}!`;
+  const looseTxt = `Let's try again, ${name}!`;
+  console.log(game() ? congrats : looseTxt);
 };
 
 export default makeGame;
