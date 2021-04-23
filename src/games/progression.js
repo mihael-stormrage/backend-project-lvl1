@@ -1,12 +1,14 @@
-import getRandInt, { sequence } from '../utils.js';
+import getRandInt from '../utils.js';
 import makeGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const printSeq = (start, step, n) => {
+const getSeqEm = (start, step, n = 1) => start + (n - 1) * step;
+
+const buildSeq = (start, step, n) => {
   const seq = [];
   for (let i = 1; i <= 10; i += 1) {
-    seq.push(i === n ? '..' : sequence(start, step, i));
+    seq.push(i === n ? '..' : getSeqEm(start, step, i));
   }
   return seq.join(' ');
 };
@@ -17,7 +19,7 @@ const progressionGame = () => makeGame(
     const start = getRandInt(1, 19);
     const step = getRandInt(1, 9);
     const n = getRandInt(1, 10);
-    return { question: printSeq(start, step, n), answer: sequence(start, step, n) };
+    return { question: buildSeq(start, step, n), answer: getSeqEm(start, step, n) };
   },
 );
 
