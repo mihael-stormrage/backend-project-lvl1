@@ -1,4 +1,5 @@
-import getRandInt, { gcd as getGcd } from '../utils.js';
+import { randomInt } from '@dmhtoo/random-int';
+import gcd from 'gcd';
 import makeGame from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -6,9 +7,9 @@ const description = 'Find the greatest common divisor of given numbers.';
 const gcdGame = () => makeGame(
   description,
   () => {
-    const a = getRandInt();
-    const b = getRandInt();
-    return { question: `${a} ${b}`, answer: getGcd(a, b) };
+    const a = randomInt();
+    const b = randomInt();
+    return { question: `${a} ${b}`, answer: gcd(a, b) };
   },
 );
 

@@ -1,4 +1,4 @@
-import getRandInt from '../utils.js';
+import { randomInt } from '@dmhtoo/random-int';
 import makeGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
@@ -16,9 +16,9 @@ const buildSeq = (start, step, n) => {
 const progressionGame = () => makeGame(
   description,
   () => {
-    const start = getRandInt(1, 19);
-    const step = getRandInt(1, 9);
-    const n = getRandInt(1, 10);
+    const start = randomInt(1, 19);
+    const step = randomInt(1, 9);
+    const n = randomInt(1, 10);
     return { question: buildSeq(start, step, n), answer: getSeqEm(start, step, n) };
   },
 );

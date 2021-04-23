@@ -1,4 +1,4 @@
-import getRandInt from '../utils.js';
+import { randomInt } from '@dmhtoo/random-int';
 import makeGame from '../index.js';
 
 const description = 'What is the result of the expression?';
@@ -15,7 +15,7 @@ Operations.product.toString = () => '*';
 
 const randOperation = (a, b) => {
   const operators = Object.values(Operations);
-  const i = getRandInt(0, operators.length - 1);
+  const i = randomInt(0, operators.length - 1);
   return {
     question: `${a} ${operators[i]} ${b}`,
     answer: operators[i](a, b),
@@ -24,7 +24,7 @@ const randOperation = (a, b) => {
 
 const calcGame = () => makeGame(
   description,
-  () => randOperation(getRandInt(), getRandInt()),
+  () => randOperation(randomInt(), randomInt()),
 );
 
 export default calcGame;
