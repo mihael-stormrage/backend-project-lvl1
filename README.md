@@ -6,7 +6,7 @@
 
 CLI math brainteasers pack
 
-[![asciicast](https://asciinema.org/a/lArG86KKfUePxjImN9bGx6x5B.svg)](https://asciinema.org/a/lArG86KKfUePxjImN9bGx6x5B)
+[![asciicast](preview.svg)](https://asciinema.org/a/lArG86KKfUePxjImN9bGx6x5B)
 
 ## Install
 ```sh

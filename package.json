@@ -1,6 +1,6 @@
 {
-  "name": "@hexlet/code",
-  "version": "3.3.1",
+  "name": "@mihael-stormrage/brain-games",
+  "version": "3.3.2",
   "description": "Brain Games",
   "type": "module",
   "main": "bin/brain-games.js",
@@ -34,6 +34,7 @@
   "devDependencies": {
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "svg-term-cli": "^2.1.1"
   }
 }
