@@ -1,13 +1,13 @@
 import greet, { ask } from './cli.js';
 
 const play = (game) => {
-  const rounds = 3;
-  let played = 0;
-  while (played < rounds) {
+  const roundsToWin = 3;
+  let winsCount = 0;
+  while (winsCount < roundsToWin) {
     if (!game()) break;
-    played += 1;
+    winsCount += 1;
   }
-  return played === rounds;
+  return winsCount === roundsToWin;
 };
 
 const makeGame = (description, question) => {
