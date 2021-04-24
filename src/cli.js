@@ -7,11 +7,4 @@ const greet = () => {
   return name;
 };
 
-const ask = (expected) => {
-  const answer = readlineSync.question('Your answer: ');
-  const isRight = answer === expected.toString();
-  console.log(isRight ? 'Correct!' : `'${answer}' is wrong answer ;(. Correct answer was '${expected}'.`);
-  return isRight;
-};
-
-export { greet as default, ask };
+export default greet;

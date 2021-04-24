@@ -1,4 +1,5 @@
-import greet, { ask } from './cli.js';
+import readlineSync from 'readline-sync';
+import greet from './cli.js';
 
 const play = (game) => {
   const roundsToWin = 3;
@@ -10,6 +11,13 @@ const play = (game) => {
   return winsCount === roundsToWin;
 };
 
+const askAssert = (expected) => {
+  const answer = readlineSync.question('Your answer: ');
+  const isRight = answer === expected.toString();
+  console.log(isRight ? 'Correct!' : `'${answer}' is wrong answer ;(. Correct answer was '${expected}'.`);
+  return isRight;
+};
+
 const makeGame = (description, question) => {
   const name = greet();
   if (!question) return;
@@ -18,7 +26,7 @@ const makeGame = (description, question) => {
   const game = () => play(() => {
     const { question: q, answer: ans } = question();
     console.log(`Question: ${q}`);
-    return ask(ans);
+    return askAssert(ans);
   });
   const congrats = `Congratulations, ${name}!`;
   const looseTxt = `Let's try again, ${name}!`;
